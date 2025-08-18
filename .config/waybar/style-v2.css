@@ -1,0 +1,118 @@
+* {
+    border: 0;
+    border-color: #FFFFF0;
+    border-radius: 6px;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+#workspaces {
+    background-color: #191919;
+    color: #FFFFF0;
+    border: 1px solid #191919;
+    transition: none;
+    border-radius: 3px;
+    margin: 2px 12px 2px 15px;
+}
+
+#workspaces button {
+    color: #FFFFF0;
+    transition: padding 0.15s ease-in-out 0.1s;
+}
+
+#workspaces button:hover {
+    color: #D6D6D6;
+    background: #4A4A4A;
+    border-radius: inherit;
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.active {
+    background-color: #FFFFF0;
+    color: #191919;
+    border-radius: 3px;
+    border-color: #191919;
+    padding: 0 16px 0 16px;
+}
+
+#memory {
+    background-color: #191919;
+    color: #FFFFF0;
+    border-radius: 3px;
+    margin: 2px 0 2px 0;
+    padding: 0 5px 0 15px;
+}
+
+#cpu {
+    background-color: #191919;
+    color: #FFFFF0;
+    border-radius: 3px;
+    margin: 2px 12px 2px 0;
+    padding: 0 15px 0 5px;
+}
+
+#window {
+    background-color: #191919;
+    color: #FFFFF0;
+    border-radius: 3px;
+    margin: 2px 0 2px 0;
+    padding: 0 20px 0 20px;
+}
+
+#privacy, #wireplumber {
+    background-color: #191919;
+    color: #FFFFF0;
+    border-radius: 3px;
+    margin: 2px 6px 2px 6px;
+    padding: 0 12px 0 12px;
+}
+
+#backlight {
+    background-color: #191919;
+    color: #FFFFF0;
+    border-radius: 3px;
+    margin: 2px 0 2px 0;
+}
+
+#language {
+    background-color: #191919;
+    color: #FFFFF0;
+    border-radius: 3px;
+    margin: 2px 12px 2px 6px;
+    padding: 0 15px 0 15px;
+}
+
+#network, #bluetooth, #tray {
+    background-color: #191919;
+    color: #FFFFF0;
+    border-radius: 3px;
+    margin: 2px 0 2px 0;
+    padding: 0 15px 0 15px;
+}
+
+#clock {
+    background-color: #191919;
+    color: #FFFFF0;
+    border-radius: 3px;
+    margin: 2px 15px 2px 12px;
+    padding: 0 15px 0 15px;
+}
+
+tooltip {
+    background-color: #191919;
+    color: #FFFFF0;
+    border: 1px solid #333333;    
+    border-radius: 3px;
+    padding: 8px;              
+}

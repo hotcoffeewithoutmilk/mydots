@@ -1,0 +1,6 @@
+colors.scheme=main
+visualizer.ellipse.radius=11
+visualizer.fps=144
+audio.stereo.enabled=true
+visualizers=ellipse,lorenz
+

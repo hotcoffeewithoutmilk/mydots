@@ -1,0 +1,25 @@
+[General]
+RememberOpenedTabs=false
+
+[Dolphin]
+ShowHiddenFiles=true
+ShowFullPathInWindowTitle=true
+RememberWindowSize=false
+ShowThumbnails=true
+
+[StatusBar]
+ShowSpaceInfo=true
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disable
+
+[MainWindow][Toolbar mainToolBar]
+IconSize=16
+ToolButtonStyle=IconOnly
+
+[PreviewSettings]
+Plugins=appimagethumbnail,exe-thumbnailer,ffmpegthumbs,gsf-office,opendocumentthumbnail,kraorathumbnail,audiothumbnail,gdk-pixbuf-thumbnailer,imagethumbnail,exrthumbnail,jpegthumbnail,windowsimagethumbnail,svgthumbnail,windowsexethumbnail,comicbookthumbnail,ffmpegthumbnailer,directorythumbnail,djvuthumbnail,cursorthumbnail,ebookthumbnail

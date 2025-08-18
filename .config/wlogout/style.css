@@ -1,0 +1,65 @@
+* {
+        background-image: none;
+/*      transition: 0; */
+}
+
+window {
+        background-color: rgba(25, 25, 25, 0.65);
+}
+
+button {
+        color: #FFFFF0;
+        background-color: rgba(25, 25, 25, 0.9);
+        border: 0 solid #d4bff9;
+        border-radius: 3rem;
+        margin: 0.8rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20%;
+        box-shadow: none;
+        font-family: "JetBrains Mono";
+        font-size: 1.7rem;
+        transition: all 0.2s ease-out;
+}
+
+button:focus {
+        background-color: rgba(55, 55, 55, 0.8);
+        background-size: 30%;
+}
+
+button:hover {
+    background-color: rgba(55, 55, 55, 0.8);
+    background-size: 30%;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
+}
+
+button:active {
+        background-color: rgba(55, 55, 55, 0.8);
+        color: #FFFFF0;
+        outline-style: none;
+}
+
+#lock {
+    background-image: image(url("./icons/lock_light.png"), url("./icons/lock_light.png"));
+}
+
+#logout {
+    background-image: image(url("./icons/logout_light.png"), url("./icons/logout_light.png"));
+}
+
+#suspend {
+    background-image: image(url("./icons/suspend_light.png"), url("./icons/suspend_light.png"));
+}
+
+#hibernate {
+    background-image: image(url("./icons/hibernate_light.png"), url("./icons/hibernate_light.png"));
+}
+
+#shutdown {
+    background-image: image(url("./icons/shutdown_light.png"), url("./icons/shutdown_light.png"));
+}
+
+#reboot {
+    background-image: image(url("./icons/reboot_light.png"), url("./icons/reboot_light.png"));
+}
