@@ -41,7 +41,7 @@ fi
 MAINPKGS="hyprland hyprlock wlogout hyprsunset hypridle hyprshot swww waypaper \
 waybar pavucontrol bluetooth bluez bluez-utils blueman nmcli network-manager-applet \
 networkmanager pipewire pipewire-pulse pipewire-jack pipewire-alsa wireplumber alsa-utils brightnessctl playerctl polkit-gnome \
-mako libnotify wofi \
+mako libnotify wofi vicinae-git \
 ttf-font-awesome ttf-jetbrains-mono noto-fonts-emoji noto-fonts noto-fonts-cjk inter-font ttf-ms-win11-auto ttf-jetbrains-mono-nerd \
 git cmake meson cpio pkg-config pkgconf gcc dbus curl wget eza \
 xdg-desktop-portal xdg-desktop-portal-hyprland xdg-user-dirs archlinux-xdg-menu \
