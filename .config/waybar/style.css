@@ -1,11 +1,11 @@
 * {
+    all: unset;
     border: none;
-    border-color: #FFFFF0;
     border-radius: 12px;
-    font-family: "Font Awesome 6 Pro", sans-serif;
+    font-family: "font awesome 6 pro", sans-serif;
     font-size: 10px;
     font-weight: 600;
-    min-height: 0;
+    min-height: 25px;
     transition: 0s;
 }
 
@@ -22,7 +22,7 @@ window#waybar.hidden {
 
 #workspaces {
     background-color: transparent;
-    color: #FFFFF0;
+    color: #fffff0;
     border: none;
     transition: none;
     border-radius: 0;
@@ -31,15 +31,17 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-    color: #FFFFF0;
-    transition: padding 0.15s ease-in-out 0.1s;
+    color: #fffff0;
+    transition: padding 0.15s ease-in-out 0.01s;
     border-radius: 12px;
-    margin: 1px;
+    margin: 0 8px 0 8px;
+    min-height: 25px;
+    min-width: 12px;
 }
 
 #workspaces button:hover {
-    color: #D6D6D6;
-    background: #4A4A4A;
+    color: #d6d6d6;
+    background: #4a4a4a;
     border-radius: 8px;
     transition: none;
     box-shadow: inherit;
@@ -47,7 +49,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-    background-color: #FFFFF0;
+    background-color: #fffff0;
     color: #191919;
     border-radius: 8px;
     border-color: #191919;
@@ -56,7 +58,7 @@ window#waybar.hidden {
 
 #memory {
     background-color: transparent;
-    color: #FFFFF0;
+    color: #fffff0;
     border-radius: 0;
     margin: 0;
     padding: 0 5px 0 5px;
@@ -64,7 +66,7 @@ window#waybar.hidden {
 
 #cpu {
     background-color: transparent;
-    color: #FFFFF0;
+    color: #fffff0;
     border-radius: 0;
     margin: 0;
     padding: 0 10px 0 5px;
@@ -72,7 +74,7 @@ window#waybar.hidden {
 
 #window {
     background-color: transparent;
-    color: #FFFFF0;
+    color: #fffff0;
     border-radius: 0;
     margin: 0;
     padding: 0 20px 0 20px;
@@ -80,7 +82,7 @@ window#waybar.hidden {
 
 #privacy, #wireplumber {
     background-color: transparent;
-    color: #FFFFF0;
+    color: #fffff0;
     border-radius: 0;
     margin: 0;
     padding: 0 12px 0 12px;
@@ -88,7 +90,7 @@ window#waybar.hidden {
 
 #backlight {
     background-color: transparent;
-    color: #FFFFF0;
+    color: #fffff0;
     border-radius: 0;
     margin: 0;
     padding: 0 12px;
@@ -96,7 +98,7 @@ window#waybar.hidden {
 
 #language {
     background-color: transparent;
-    color: #FFFFF0;
+    color: #fffff0;
     border-radius: 0;
     margin: 0;
     padding: 0 15px 0 15px;
@@ -105,7 +107,7 @@ window#waybar.hidden {
 #network, #bluetooth,
 #tray {
     background-color: transparent;
-    color: #FFFFF0;
+    color: #fffff0;
     border-radius: 8;
     margin: 0;
     padding: 0 15px 0 15px;
@@ -113,7 +115,7 @@ window#waybar.hidden {
 
 #clock {
     background-color: transparent;
-    color: #FFFFF0;
+    color: #fffff0;
     border-radius: 0;
     margin: 0 18px 0 5px;
     padding: 0;
@@ -121,8 +123,8 @@ window#waybar.hidden {
 
 tooltip {
     background-color: #191919;
-    color: #FFFFF0;
-    border: 1px solid #333333;    
-    border-radius: 12px;      
-    padding: 8px;              
+    color: #fffff0;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 8px;
 }

@@ -44,8 +44,8 @@ networkmanager pipewire pipewire-pulse pipewire-jack pipewire-alsa wireplumber a
 mako libnotify wofi vicinae-git \
 ttf-font-awesome ttf-jetbrains-mono noto-fonts-emoji noto-fonts noto-fonts-cjk inter-font ttf-ms-win11-auto ttf-jetbrains-mono-nerd \
 git cmake meson cpio pkg-config pkgconf gcc dbus curl wget eza \
-xdg-desktop-portal xdg-desktop-portal-hyprland xdg-user-dirs archlinux-xdg-menu \
-kate qt5 qt6 qt5-wayland qt6-wayland qt5ct qt6ct kvantum kservice5 kde-cli-tools kdeconnect dolphin kio-admin kio-gdrive ark zip unzip 7zip unrar unarchiver ffmpegthumbs kdegraphics-thumbnailers kde-thumbnailer-apk raw-thumbnailer resvg qt6-imageformats icoutils \
+xdg-desktop-portal xdg-desktop-portal-hyprland xdg-user-dirs archlinux-xdg-menu xdg-desktop-portal-gtk \
+kate qt5 qt6 qt5-wayland qt6-wayland qt5ct qt6ct kdeconnect dolphin kio-admin kio-gdrive ark zip unzip 7zip unrar unarchiver ffmpegthumbs kdegraphics-thumbnailers kde-thumbnailer-apk raw-thumbnailer resvg qt6-imageformats icoutils \
 qemu-base libvirt virt-manager virt-install qemu-img edk2-ovmf dnsmasq libosinfo tuned vde2 bridge-utils openbsd-netcat iptables \
 wl-clipboard wl-clip-persist cliphist \
 fish vim nvim starship gimp btop qview mpv zen-browser-bin qbittorrent nyancat cli-visualizer fastfetch"
@@ -153,7 +153,7 @@ cp -r "/tmp/mydots/Pictures" "$HOME" || { echo "couldn't move files to the home 
 sudo cp -r "/tmp/mydots/presets/fonts/"* "/usr/share/fonts/" && sudo fc-cache -f -v || { echo "failed to copy fonts" | tee -a ~/installerrors.txt; }
 
 find "$HOME/.config/hypr/scripts/" -type f -name "*.sh" -print0 | xargs -0 chmod +x
-sh .config/hypr/scripts/themechange.sh
+sh ~/.config/hypr/scripts/themechange.sh
 
 if choice "Do you want to reboot"; then
   reboot
