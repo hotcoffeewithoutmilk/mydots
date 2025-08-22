@@ -61,7 +61,6 @@ systemctl_user_services=(
   "pipewire"
   "pipewire-pulse"
   "wireplumber"
-  "vicinae"
 )
 
 for service in "${systemctl_system_services[@]}"; do
