@@ -45,6 +45,7 @@ window#waybar.hidden {
     transition: none;
     box-shadow: inherit;
     text-shadow: inherit;
+    padding: 0 15px 0 15px;
 }
 
 #workspaces button.active {
