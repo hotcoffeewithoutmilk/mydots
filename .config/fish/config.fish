@@ -20,6 +20,7 @@ alias lt='eza --icons=auto --tree' # list folder as tree
 alias myip='bash ~/.config/hypr/scripts/iptest.sh'
 alias s='sudo find / -name'
 alias update='yay -Syu --noconfirm && flatpak update'
+alias clearcache='sudo pacman -Rns $(pacman -Qtdq) && sudo pacman -Scc'
 
 # Handy change dir shortcuts
 abbr .. 'cd ..'
