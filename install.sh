@@ -45,7 +45,7 @@ mako libnotify wofi vicinae-git \
 ttf-font-awesome ttf-jetbrains-mono noto-fonts-emoji noto-fonts noto-fonts-cjk inter-font ttf-ms-win11-auto ttf-jetbrains-mono-nerd \
 git cmake meson cpio pkg-config pkgconf gcc dbus curl wget eza \
 xdg-desktop-portal xdg-desktop-portal-hyprland xdg-user-dirs archlinux-xdg-menu xdg-desktop-portal-gtk \
-kate qt5 qt6 qt5-wayland qt6-wayland qt5ct qt6ct kdeconnect dolphin kio-admin kio-gdrive ark zip unzip 7zip unrar unarchiver ffmpegthumbs kdegraphics-thumbnailers kde-thumbnailer-apk raw-thumbnailer resvg qt6-imageformats icoutils \
+kate qt5 qt6 qt5ct qt6ct kdeconnect dolphin kio-admin kio-gdrive ark zip unzip 7zip unrar unarchiver ffmpegthumbs kdegraphics-thumbnailers kde-thumbnailer-apk raw-thumbnailer resvg qt6-imageformats icoutils \
 qemu-base libvirt virt-manager virt-install qemu-img edk2-ovmf dnsmasq libosinfo tuned vde2 bridge-utils openbsd-netcat iptables \
 wl-clipboard wl-clip-persist cliphist \
 fish vim nvim starship gimp btop qview mpv zen-browser-bin qbittorrent nyancat cli-visualizer fastfetch"
@@ -75,7 +75,7 @@ for service in "${systemctl_user_services[@]}"; do
 done
 
 if choice "Do you want to install the optional programs?"; then
-  RECOMENDPKGS="steam opentabletdriver gamemode portproton legacy-launcher lib32-gamemode mission-center flatpak spotify termius visual-studio-code-bin libreoffice-fresh ayugram-desktop-git obsidian vesktop-bin obs-studio throne torbrowser-launcher amneziawg-dkms amneziawg-tools openresolv perl-image-exiftool nmap fbreader ungoogled-chromium-bin adspower-global scrcpy android-tools"
+  RECOMENDPKGS="steam opentabletdriver gamemode portproton legacy-launcher lib32-gamemode mission-center flatpak spotify termius visual-studio-code-bin libreoffice-fresh obsidian vesktop-bin obs-studio throne torbrowser-launcher amneziawg-dkms amneziawg-tools openresolv perl-image-exiftool nmap fbreader ungoogled-chromium-bin scrcpy android-tools"
 
   sudo sed -i 's/^#\(\[multilib\]\)/\1/' /etc/pacman.conf && echo "commented out [multilib]" || {
     echo "couldn't uncomment [multilib]"
