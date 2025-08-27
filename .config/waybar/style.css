@@ -1,130 +1,126 @@
 * {
-    border: none;
-    border-radius: 12px;
-    font-family: "font awesome 6 pro", sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    min-height: 0;
-    transition: 0s;
+  border: none;
+  border-radius: 10px;
+  font-family: "FiraCode", sans-serif;
 }
 
 window#waybar {
-    background: #191919;
-    border-radius: 0;
-    margin: 0 15px;
-    padding: 1px 0;
+  background: #191919;
+  color: #fffff0;
+  border-radius: 0;
+  margin: 0 15px;
+  min-height: 24px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+  opacity: 0.2;
+}
+
+menu, popup {
+  border-radius: 12px;
+  padding: 6px;
+  border: 1px solid #333333;
+}
+
+menuitem {
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-family: "FiraCode", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  min-height: 0px;
 }
 
 #workspaces {
-    background-color: transparent;
-    color: #fffff0;
-    border: none;
-    transition: none;
-    border-radius: 0;
-    margin: 0 5px 0 18px;
-    padding: 0;
+  border-radius: 0;
+  margin: 0 5px 0 18px;
+  padding: 0;
 }
 
 #workspaces button {
-    color: #fffff0;
-    transition: padding 0.15s ease-in-out 0.01s;
-    border-radius: 12px;
-    margin: 0 8px 0 8px;
-    min-height: 0px;
-    min-width: 1px;
-}
-
-#workspaces button:hover {
-    color: #d6d6d6;
-    background: #4a4a4a;
-    border-radius: 8px;
-    transition: none;
-    box-shadow: inherit;
-    text-shadow: inherit;
-    padding: 0 15px 0 15px;
+  color: #7A7A7A;
+  padding: 2px 8px 2px 8px;
+  margin: 0 5px 0 5px;
+  padding:0 5px 0 5px;
+  border-radius: 0px;
+  background-color: transparent;
+  font-weight: 900;
 }
 
 #workspaces button.active {
-    background-color: #fffff0;
-    color: #191919;
-    border-radius: 8px;
-    border-color: #191919;
-    padding: 0 23px 0 23px;
+  background-color: transparent;
+  color:  #fffff0;
+}
+
+#workspaces button:hover {
+  box-shadow: none;
+  color: #9A9A9A
 }
 
 #memory {
-    background-color: transparent;
-    color: #fffff0;
-    border-radius: 0;
-    margin: 0;
-    padding: 0 5px 0 5px;
+  border-radius: 0;
+  margin: 0 0 0 11px;
+  padding: 0 5px 0 5px;
 }
 
 #cpu {
-    background-color: transparent;
-    color: #fffff0;
-    border-radius: 0;
-    margin: 0;
-    padding: 0 10px 0 5px;
+  border-radius: 0;
+  margin: 0;
+  padding: 0 10px 0 5px;
 }
 
 #window {
-    background-color: transparent;
-    color: #fffff0;
-    border-radius: 0;
-    margin: 0;
-    padding: 0 5px 0 5px;
+  border-radius: 0;
+  margin: 0;
+  padding: 0 5px 0 5px;
 }
 
-#privacy, #wireplumber {
-    background-color: transparent;
-    color: #fffff0;
-    border-radius: 0;
-    margin: 0;
-    padding: 0 12px 0 12px;
+#privacy, 
+#wireplumber {
+  border-radius: 0;
+  margin: 0 10px 0 10px;
+  padding: 0 8px 0 8px;
+  border-radius: 10;
+}
+
+#wireplumber.muted {
+  background: #6B1C1C;
+  color: #fffff0; 
+  margin: 0;
 }
 
 #backlight {
-    background-color: transparent;
-    color: #fffff0;
-    border-radius: 0;
-    margin: 0;
-    padding: 0 12px;
+  border-radius: 0;
+  margin: 0;
+  padding: 0 12px;
 }
 
 #language {
-    background-color: transparent;
-    color: #fffff0;
-    border-radius: 0;
-    margin: 0;
-    padding: 0 15px 0 15px;
+  border-radius: 0;
+  margin: 0 10px 0 10px;
+  padding: 0 8px 0 8px;
 }
 
-#network, #bluetooth,
+#network,
+#bluetooth,
 #tray {
-    background-color: transparent;
-    color: #fffff0;
-    border-radius: 8;
-    margin: 0;
-    padding: 0 15px 0 15px;
+  border-radius: 8;
+  margin: 0;
+  padding: 0 15px 0 15px;
 }
 
 #clock {
-    background-color: transparent;
-    color: #fffff0;
-    border-radius: 0;
-    margin: 0 18px 0 5px;
-    padding: 0;
+  border-radius: 0;
+  margin: 0 25px 0 10px;
+  padding: 0;
 }
 
 tooltip {
-    background-color: #191919;
-    color: #fffff0;
-    border: 1px solid #333333;
-    border-radius: 12px;
-    padding: 8px;
+  background-color: #191919;
+  color: #fffff0;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 8px;
 }
