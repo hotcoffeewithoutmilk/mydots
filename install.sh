@@ -52,27 +52,34 @@ fish vim nvim starship gimp btop qview mpv zen-browser-bin qbittorrent nyancat c
 
 yay -S --needed --noconfirm $MAINPKGS
 
-systemctl_system_services=(
-  "bluetooth"
-  "NetworkManager"
-  "libvirtd"
-)
-systemctl_user_services=(
-  "pipewire"
-  "pipewire-pulse"
-  "wireplumber"
-)
+if [[ $(ps -p 1 -o comm=) == "systemd" ]]; then
+  echo "Systemd detected, enabling services...aspodjadjjjjjjjjjjjjjjjjjjJJJJJJJJJjjjjjjjjjjjjjjjjjjjJJJJJjjJJJJjjJJJJJJJJJJJJJJJJJJJJJJJSDASDjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"
 
-for service in "${systemctl_system_services[@]}"; do
-  echo "Processing servies: $service"
-  sudo systemctl enable "$service" || { echo "failed to enable $service" | tee -a ~/installerrors.txt; }
-  sudo systemctl start "$service" || { echo "failed to start $service" | tee -a ~/installerrors.txt; }
-done
-for service in "${systemctl_user_services[@]}"; do
-  echo "Processing service: $service"
-  systemctl --user enable "$service" || { echo "failed to enable $service" | tee -a ~/installerrors.txt; }
-  systemctl --user start "$service" || { echo "failed to start $service" | tee -a ~/installerrors.txt; }
-done
+  systemctl_system_services=(
+    "bluetooth"
+    "NetworkManager"
+    "libvirtd"
+  )
+  systemctl_user_services=(
+    "pipewire"
+    "pipewire-pulse"
+    "wireplumber"
+  )
+
+  for service in "${systemctl_system_services[@]}"; do
+    echo "Processing service: $service"
+    sudo systemctl enable "$service" || { echo "failed to enable $service" | tee -a ~/installerrors.txt; }
+    sudo systemctl start "$service" || { echo "failed to start $service" | tee -a ~/installerrors.txt; }
+  done
+  for service in "${systemctl_user_services[@]}"; do
+    echo "Processing service: $service"
+    systemctl --user enable "$service" || { echo "failed to enable $service" | tee -a ~/installerrors.txt; }
+    systemctl --user start "$service" || { echo "failed to start $service" | tee -a ~/installerrors.txt; }
+  done
+
+else
+  echo "Systemd not detected, skipping service setup"
+fi
 
 if choice "Do you want to install the optional programs?"; then
   RECOMENDPKGS="steam opentabletdriver gamemode portproton legacy-launcher lib32-gamemode mission-center flatpak spotify termius visual-studio-code-bin libreoffice-fresh obsidian vesktop-bin obs-studio throne torbrowser-launcher amneziawg-dkms amneziawg-tools openresolv perl-image-exiftool nmap fbreader ungoogled-chromium-bin scrcpy android-tools"
