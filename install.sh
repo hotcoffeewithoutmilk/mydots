@@ -48,7 +48,7 @@ xdg-desktop-portal xdg-desktop-portal-hyprland xdg-user-dirs archlinux-xdg-menu 
 kate qt5 qt6 qt5ct qt6ct kdeconnect dolphin kio-admin kio-gdrive ark zip unzip 7zip unrar unarchiver ffmpegthumbs kdegraphics-thumbnailers kde-thumbnailer-apk raw-thumbnailer resvg qt6-imageformats icoutils \
 qemu-base libvirt virt-manager virt-install qemu-img edk2-ovmf dnsmasq libosinfo tuned vde2 bridge-utils openbsd-netcat iptables \
 wl-clipboard wl-clip-persist cliphist \
-fish vim nvim starship gimp btop qview mpv zen-browser-bin qbittorrent nyancat cli-visualizer fastfetch"
+fish vim nvim tree starship gimp btop sl qview mpv zen-browser-bin qbittorrent nyancat cli-visualizer fastfetch"
 
 yay -S --needed --noconfirm $MAINPKGS
 
