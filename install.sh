@@ -38,11 +38,11 @@ else
   echo "Yay is already installed"
 fi
 
-MAINPKGS="hyprland hyprlock wlogout hyprsunset hypridle hyprshot swww waypaper \
+MAINPKGS="hyprlock wlogout hyprsunset hypridle hyprshot swww waypaper \
 waybar pavucontrol bluetooth bluez bluez-utils blueman nmcli network-manager-applet \
 networkmanager pipewire pipewire-pulse pipewire-jack pipewire-alsa wireplumber alsa-utils brightnessctl playerctl polkit-gnome \
-mako libnotify wofi vicinae-git \
-ttf-font-awesome ttf-jetbrains-mono noto-fonts-emoji noto-fonts noto-fonts-cjk inter-font ttf-ms-win11-auto ttf-jetbrains-mono-nerd \
+mako libnotify wofi vicinae-bin \
+ttf-fira-code ttf-jetbrains-mono noto-fonts-emoji noto-fonts noto-fonts-cjk inter-font ttf-ms-win11-auto ttf-jetbrains-mono-nerd \
 git cmake meson cpio pkg-config pkgconf gcc dbus curl wget eza \
 xdg-desktop-portal xdg-desktop-portal-hyprland xdg-user-dirs archlinux-xdg-menu xdg-desktop-portal-gtk \
 kate qt5 qt6 qt5ct qt6ct kdeconnect dolphin kio-admin kio-gdrive ark zip unzip 7zip unrar unarchiver ffmpegthumbs kdegraphics-thumbnailers kde-thumbnailer-apk raw-thumbnailer resvg qt6-imageformats icoutils \
@@ -53,7 +53,7 @@ fish vim nvim tree starship gimp btop sl qview mpv zen-browser-bin qbittorrent n
 yay -S --needed --noconfirm $MAINPKGS
 
 if [[ $(ps -p 1 -o comm=) == "systemd" ]]; then
-  echo "Systemd detected, enabling services...aspodjadjjjjjjjjjjjjjjjjjjJJJJJJJJJjjjjjjjjjjjjjjjjjjjJJJJJjjJJJJjjJJJJJJJJJJJJJJJJJJJJJJJSDASDjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"
+  echo "Systemd detected, enabling services..."
 
   systemctl_system_services=(
     "bluetooth"
@@ -82,17 +82,25 @@ else
 fi
 
 if choice "Do you want to install the optional programs?"; then
-  RECOMENDPKGS="steam opentabletdriver gamemode portproton legacy-launcher lib32-gamemode mission-center flatpak spotify termius visual-studio-code-bin libreoffice-fresh obsidian vesktop-bin obs-studio throne torbrowser-launcher amneziawg-dkms amneziawg-tools openresolv perl-image-exiftool nmap fbreader ungoogled-chromium-bin scrcpy android-tools"
+  RECOMENDPKGS="steam opentabletdriver gamemode portproton legacy-launcher lib32-gamemode mission-center flatpak spotify termius visual-studio-code-bin libreoffice-fresh obsidian vesktop-bin obs-studio throne-bin torbrowser-launcher amneziawg-dkms amneziawg-tools openresolv perl-image-exiftool nmap burpsuite wireshark-qt fbreader ungoogled-chromium-bin librewolf-bin scrcpy android-tools"
 
-  sudo sed -i 's/^#\(\[multilib\]\)/\1/' /etc/pacman.conf && echo "commented out [multilib]" || {
-    echo "couldn't uncomment [multilib]"
-    exit 1
-  }
-  sudo sed -i '/^\[multilib\]/{n;s/^#\(Include = \/etc\/pacman\.d\/mirrorlist\)/\1/}' /etc/pacman.conf && echo "commented out include for [multilib]" || {
-    echo "failed to uncomment Include for [multilib]"
-    exit 1
-  }
-  sudo pacman -Syy || { echo "couldn't execute pacman Syy" | tee -a ~/installerrors.txt; }
+  if [[ $(ps -p 1 -o comm=) == "systemd" ]]; then
+    echo "Systemd detected, enabling multilib and updating pacman databases..."
+
+    sudo sed -i 's/^#\(\[multilib\]\)/\1/' /etc/pacman.conf && echo "uncommented [multilib]" || {
+      echo "couldn't uncomment [multilib]"
+      exit 1
+    }
+
+    sudo sed -i '/^\[multilib\]/{n;s/^#\(Include = \/etc\/pacman\.d\/mirrorlist\)/\1/}' /etc/pacman.conf && echo "uncommented include for [multilib]" || {
+      echo "failed to uncomment Include for [multilib]"
+      exit 1
+    }
+
+    sudo pacman -Syu || { echo "couldn't execute pacman -Syu" | tee -a ~/installerrors.txt; }
+  else
+    echo "Systemd not detected, skipping multilib enabling and pacman update"
+  fi
 
   yay -S --needed --noconfirm $RECOMENDPKGS
 
@@ -157,7 +165,7 @@ cp -r "/tmp/mydots/.config" "$HOME" || { echo "couldn't move files to the home d
 cp -r "/tmp/mydots/.local" "$HOME" || { echo "couldn't move files to the home directory" | exit 1; }
 cp -r "/tmp/mydots/.nmap" "$HOME" || { echo "couldn't move files to the home directory" | exit 1; }
 cp -r "/tmp/mydots/Pictures" "$HOME" || { echo "couldn't move files to the home directory" | exit 1; }
-sudo cp -r "/tmp/mydots/presets/fonts/"* "/usr/share/fonts/" && sudo fc-cache -f -v || { echo "failed to copy fonts" | tee -a ~/installerrors.txt; }
+sudo cp -r "/tmp/mydots/presets/fonts/"* "/usr/share/fonts/TTF" && sudo fc-cache -f -v || { echo "failed to copy fonts" | tee -a ~/installerrors.txt; }
 
 find "$HOME/.config/hypr/scripts/" -type f -name "*.sh" -print0 | xargs -0 chmod +x
 sh ~/.config/hypr/scripts/themechange.sh
