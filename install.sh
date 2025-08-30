@@ -42,7 +42,7 @@ MAINPKGS="hyprlock wlogout hyprsunset hypridle hyprshot swww waypaper \
 waybar pavucontrol bluetooth bluez bluez-utils blueman nmcli network-manager-applet \
 networkmanager pipewire pipewire-pulse pipewire-jack pipewire-alsa wireplumber alsa-utils brightnessctl playerctl polkit-gnome \
 mako libnotify wofi vicinae-bin \
-ttf-fira-code ttf-jetbrains-mono noto-fonts-emoji noto-fonts noto-fonts-cjk inter-font ttf-ms-win11-auto ttf-jetbrains-mono-nerd \
+ttf-fira-code ttf-jetbrains-mono noto-fonts-emoji noto-fonts noto-fonts-cjk inter-font ttf-hack ttf-ms-win11-auto ttf-jetbrains-mono-nerd \
 git cmake meson cpio pkg-config pkgconf gcc dbus curl wget eza \
 xdg-desktop-portal xdg-desktop-portal-hyprland xdg-user-dirs archlinux-xdg-menu xdg-desktop-portal-gtk \
 kate qt5 qt6 qt5ct qt6ct kdeconnect dolphin kio-admin kio-gdrive ark zip unzip 7zip unrar unarchiver ffmpegthumbs kdegraphics-thumbnailers kde-thumbnailer-apk raw-thumbnailer resvg qt6-imageformats icoutils \
@@ -82,7 +82,7 @@ else
 fi
 
 if choice "Do you want to install the optional programs?"; then
-  RECOMENDPKGS="steam opentabletdriver gamemode portproton legacy-launcher lib32-gamemode mission-center flatpak spotify termius visual-studio-code-bin libreoffice-fresh obsidian vesktop-bin obs-studio throne-bin torbrowser-launcher amneziawg-dkms amneziawg-tools openresolv perl-image-exiftool nmap burpsuite wireshark-qt fbreader ungoogled-chromium-bin librewolf-bin scrcpy android-tools"
+  RECOMENDPKGS="steam opentabletdriver gamemode portproton legacy-launcher lib32-gamemode mission-center flatpak spotify termius visual-studio-code-bin libreoffice-fresh obsidian vesktop-bin obs-studio throne-bin torbrowser-launcher amneziawg-dkms amneziawg-tools openresolv perl-image-exiftool nmap burpsuite wireshark-qt nikto skipfish fbreader ungoogled-chromium-bin librewolf-bin scrcpy android-tools"
 
   if [[ $(ps -p 1 -o comm=) == "systemd" ]]; then
     echo "Systemd detected, enabling multilib and updating pacman databases..."
@@ -125,7 +125,7 @@ fi
 if choice "Do you want to install the SDDM theme?"; then
   if git clone -b main --depth=1 https://github.com/uiriansan/SilentSDDM /tmp/SilentSDDM && cd /tmp/SilentSDDM && ./install.sh; then
     sudo cp /tmp/mydots/presets/mydm.conf /usr/share/sddm/themes/silent/configs/ || { echo "failed to copy mydm.conf" | tee -a ~/installerrors.txt; }
-    sudo cp /tmp/mydots/presets/miku.png /usr/share/sddm/themes/silent/backgrounds/miku.png || { echo "failed to copy miku.png" | tee -a ~/installerrors.txt; }
+    sudo cp /tmp/mydots/presets/Earth.jpg /usr/share/sddm/themes/silent/backgrounds/Earth.jpg || { echo "failed to copy Earth.jpg" | tee -a ~/installerrors.txt; }
     sudo sed -i 's|ConfigFile=configs/default.conf|ConfigFile=configs/mydm.conf|' /usr/share/sddm/themes/silent/metadata.desktop || { echo "failed to change sddm conf" | tee -a ~/installerrors.txt; }
 
     if ! sudo mv /tmp/mydots/presets/username.face.icon /usr/share/sddm/faces/"$USER".face.icon; then
